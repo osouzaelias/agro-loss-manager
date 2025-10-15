@@ -1,7 +1,5 @@
 #  AgroLoss Manager: Gestão de Perdas na Colheita
 
----
-
 ## 1. Visão Geral do Projeto
 
 O **AgroLoss Manager** é uma aplicação web full-stack desenvolvida para atender a uma necessidade crítica do agronegócio brasileiro: o monitoramento e a redução de perdas na colheita de cana-de-açúcar. O Brasil, apesar de ser líder mundial na produção, enfrenta perdas que podem chegar a 15% durante a colheita mecanizada, representando um prejuízo significativo para os produtores.
@@ -43,7 +41,7 @@ Siga os passos abaixo para configurar e executar a aplicação em seu ambiente l
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [URL-DO-SEU-REPOSITORIO]
+    git clone https://github.com/osouzaelias/agro-loss-manager.git
     cd agro-loss-manager
     ```
 
