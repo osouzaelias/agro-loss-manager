@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroLoss Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🌾 AgroLoss Manager</h1>
+        <p>Gestão de Perdas na Colheita de Cana-de-Açúcar</p>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Cadastrar Novo Registro de Colheita</h2>
+            <form id="colheita-form">
+                <div class="form-group">
+                    <label for="id_talhao">ID do Talhão/Área:</label>
+                    <input type="text" id="id_talhao" name="id_talhao" required placeholder="Ex: T-015">
+                </div>
+                <div class="form-group">
+                    <label for="maquina">Modelo da Colheitadeira:</label>
+                    <input type="text" id="maquina" name="maquina" required placeholder="Ex: Colheitadeira XYZ-2000">
+                </div>
+                <div class="form-group">
+                    <label for="operador">Nome do Operador:</label>
+                    <input type="text" id="operador" name="operador" required placeholder="Ex: João Silva">
+                </div>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="toneladas_potenciais">Toneladas Potenciais:</label>
+                        <input type="number" id="toneladas_potenciais" name="toneladas_potenciais" step="0.01" required
+                               min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="toneladas_colhidas">Toneladas Colhidas:</label>
+                        <input type="number" id="toneladas_colhidas" name="toneladas_colhidas" step="0.01" required
+                               min="0">
+                    </div>
+                </div>
+                <button type="submit" id="btn-adicionar">Adicionar Registro</button>
+            </form>
+        </div>
+
+        <div class="list-container">
+            <h2>Registros de Colheita</h2>
+            <div class="actions">
+                <button id="btn-atualizar">Atualizar Lista</button>
+                <button id="btn-gerar-relatorio">Gerar Relatório (.txt)</button>
+            </div>
+            <div id="mensagem"></div>
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Talhão</th>
+                    <th>Máquina</th>
+                    <th>Operador</th>
+                    <th>Potencial (t)</th>
+                    <th>Colhido (t)</th>
+                    <th>Perda (%)</th>
+                </tr>
+                </thead>
+                <tbody id="colheitas-lista">
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="../static/app.js"></script>
+</body>
+</html>
