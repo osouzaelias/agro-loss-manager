@@ -4,7 +4,7 @@
 
 ## 1. Visão Geral do Projeto
 
-O **AgroLoss Manager** é uma aplicação web full-stack desenvolvida para atender a uma necessidade crítica do agronegócio brasileiro: o monitoramento e a redução de perdas na colheita de cana-de-açúcar. [cite_start]O Brasil, apesar de ser líder mundial na produção, enfrenta perdas que podem chegar a 15% durante a colheita mecanizada, representando um prejuízo significativo para os produtores[cite: 87, 89].
+O **AgroLoss Manager** é uma aplicação web full-stack desenvolvida para atender a uma necessidade crítica do agronegócio brasileiro: o monitoramento e a redução de perdas na colheita de cana-de-açúcar. O Brasil, apesar de ser líder mundial na produção, enfrenta perdas que podem chegar a 15% durante a colheita mecanizada, representando um prejuízo significativo para os produtores.
 
 Esta solução oferece uma plataforma intuitiva para que gestores agrícolas possam registrar dados de cada operação de colheita, visualizar um histórico consolidado e gerar relatórios para análise, auxiliando na tomada de decisões estratégicas para otimizar a produtividade.
 
@@ -81,12 +81,12 @@ Siga os passos abaixo para configurar e executar a aplicação em seu ambiente l
 
 Esta seção detalha como o projeto atende a todos os critérios de avaliação da atividade "Cap 6 - Python e além".
 
--   [cite_start][x] **Lógica Clara e Objetiva[cite: 120]:** A aplicação da Clean Architecture garante que cada componente tenha uma responsabilidade única, resultando em um código organizado e de fácil entendimento.
--   [cite_start][x] **Relevância com o Pedido [cite: 122][cite_start]:** A solução aborda diretamente um problema real e documentado do agronegócio: as perdas na colheita de cana-de-açúcar[cite: 88, 89].
--   [cite_start][x] **Inovação na Proposta[cite: 123]:** O projeto evoluiu de um simples script para uma aplicação web full-stack completa, com API, interface reativa, banco de dados e testes automatizados, demonstrando uma solução moderna e robusta.
--   [cite_start][x] **Consistência dos Dados de Entrada[cite: 124]:** A validação ocorre em duas frentes: no front-end (com atributos HTML como `required` e `type="number"`) e no back-end (com os modelos Pydantic do FastAPI, que garantem o tipo e o formato dos dados).
--   [cite_start][x] **Usabilidade e Clareza na Apresentação dos Dados[cite: 125]:** A interface web é limpa, intuitiva e fornece feedback visual para o usuário (mensagens de sucesso/erro, desabilitação de botões durante ações), tornando a experiência de uso fluida.
--   [cite_start][x] **Subalgoritmos (Funções e Procedimentos)[cite: 112]:** O código é totalmente modularizado em funções e classes, como os Casos de Uso (`CadastrarColheita`, `ListarColheitas`) e os Serviços de Domínio (`calcular_perda`).
--   [cite_start][x] **Estruturas de Dados[cite: 113]:** O projeto utiliza listas para agrupar registros, dicionários para transferência de dados entre camadas e objetos (dataclasses) para representar as entidades de negócio.
--   [cite_start][x] **Manipulação de Arquivos[cite: 114]:** A persistência de dados é feita via **SQLite**, que opera sobre um arquivo de banco de dados (`.db`). Além disso, a funcionalidade de relatório gera e manipula um arquivo de texto (`.txt`) que é enviado para download.
--   [cite_start][x] **Conexão com Banco de Dados[cite: 115]:** Embora o requisito original mencionasse Oracle, a opção por **SQLite** foi uma decisão de design para garantir a portabilidade e a facilidade de execução do projeto sem a necessidade de um SGBD externo. A arquitetura (Repository Pattern) permite que o banco de dados seja trocado para Oracle com esforço mínimo, alterando apenas a implementação na camada de infraestrutura.
+1. [x] **Lógica Clara e Objetiva:** A aplicação da Clean Architecture garante que cada componente tenha uma responsabilidade única, resultando em um código organizado e de fácil entendimento.
+2. [x] **Relevância com o Pedido:** A solução aborda diretamente um problema real e documentado do agronegócio: as perdas na colheita de cana-de-açúcar.
+3. [x] **Inovação na Proposta:** O projeto evoluiu de um simples script para uma aplicação web full-stack completa, com API, interface reativa, banco de dados e testes automatizados, demonstrando uma solução moderna e robusta.
+4. [x] **Consistência dos Dados de Entrada:** A validação ocorre em duas frentes: no front-end (com atributos HTML como `required` e `type="number"`) e no back-end (com os modelos Pydantic do FastAPI, que garantem o tipo e o formato dos dados).
+5. [x] **Usabilidade e Clareza na Apresentação dos Dados:** A interface web é limpa, intuitiva e fornece feedback visual para o usuário (mensagens de sucesso/erro, desabilitação de botões durante ações), tornando a experiência de uso fluida.
+6. [x] **Subalgoritmos (Funções e Procedimentos):** O código é totalmente modularizado em funções e classes, como os Casos de Uso (`CadastrarColheita`, `ListarColheitas`) e os Serviços de Domínio (`calcular_perda`).
+7. [x] **Estruturas de Dados:** O projeto utiliza listas para agrupar registros, dicionários para transferência de dados entre camadas e objetos (dataclasses) para representar as entidades de negócio.
+8. [x] **Manipulação de Arquivos:** A persistência de dados é feita via **SQLite**, que opera sobre um arquivo de banco de dados (`.db`). Além disso, a funcionalidade de relatório gera e manipula um arquivo de texto (`.txt`) que é enviado para download.
+9. [x] **Conexão com Banco de Dados:** Embora o requisito original mencionasse Oracle, a opção por **SQLite** foi uma decisão de design para garantir a portabilidade e a facilidade de execução do projeto sem a necessidade de um SGBD externo. A arquitetura (Repository Pattern) permite que o banco de dados seja trocado para Oracle com esforço mínimo, alterando apenas a implementação na camada de infraestrutura.
